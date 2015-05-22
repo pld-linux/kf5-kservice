@@ -1,18 +1,18 @@
 # TODO:
 # - dir /usr/include/KF5 not packaged
 # /usr/share/kservicetypes5 not packaged
-%define		kdeframever	5.4
+%define		kdeframever	5.10
 %define		qtver		5.3.2
 %define		kfname		kservice
 
 Summary:	Plugin framework for desktop services
 Name:		kf5-%{kfname}
-Version:	5.4.0
+Version:	5.10.0
 Release:	0.1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a75aecd21bb84616a6cc91ffa71e37d6
+# Source0-md5:	204fc310ebcbd7e15e8da30fac48416f
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel >= %{qtver}
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -88,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 /etc/xdg/menus/applications.menu
 %attr(755,root,root) %{_bindir}/kbuildsycoca5
 %attr(755,root,root) %ghost %{_libdir}/libKF5Service.so.5
-%attr(755,root,root) %{_libdir}/libKF5Service.so.5.4.0
+%attr(755,root,root) %{_libdir}/libKF5Service.so.*.*
 %{_datadir}/kservicetypes5/application.desktop
 %{_datadir}/kservicetypes5/kplugininfo.desktop
 %{_mandir}/man8/kbuildsycoca5.8*
