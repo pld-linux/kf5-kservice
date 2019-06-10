@@ -1,15 +1,15 @@
-%define		kdeframever	5.56
+%define		kdeframever	5.59
 %define		qtver		5.9.0
 %define		kfname		kservice
 
 Summary:	Plugin framework for desktop services
 Name:		kf5-%{kfname}
-Version:	5.56.0
+Version:	5.59.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	a66a5bba0556be3da8487f13f524c3bb
+# Source0-md5:	c7c73eaffc8a6560de89f360b075dab0
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel >= %{qtver}
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -91,7 +91,26 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libKF5Service.so.*.*
 %{_datadir}/kservicetypes5/application.desktop
 %{_datadir}/kservicetypes5/kplugininfo.desktop
+%{_mandir}/man8/desktoptojson.8*
 %{_mandir}/man8/kbuildsycoca5.8*
+%lang(ca) %{_mandir}/ca/man8/desktoptojson.8*
+%lang(ca) %{_mandir}/ca/man8/kbuildsycoca5.8*
+%lang(de) %{_mandir}/de/man8/desktoptojson.8*
+%lang(de) %{_mandir}/de/man8/kbuildsycoca5.8*
+%lang(es) %{_mandir}/es/man8/desktoptojson.8*
+%lang(es) %{_mandir}/es/man8/kbuildsycoca5.8*
+%lang(it) %{_mandir}/it/man8/desktoptojson.8*
+%lang(it) %{_mandir}/it/man8/kbuildsycoca5.8*
+%lang(nl) %{_mandir}/nl/man8/desktoptojson.8*
+%lang(nl) %{_mandir}/nl/man8/kbuildsycoca5.8*
+%lang(pt) %{_mandir}/pt/man8/desktoptojson.8*
+%lang(pt) %{_mandir}/pt/man8/kbuildsycoca5.8*
+%lang(pt_BR) %{_mandir}/pt_BR/man8/desktoptojson.8*
+%lang(pt_BR) %{_mandir}/pt_BR/man8/kbuildsycoca5.8*
+%lang(sv) %{_mandir}/sv/man8/desktoptojson.8*
+%lang(sv) %{_mandir}/sv/man8/kbuildsycoca5.8*
+%lang(uk) %{_mandir}/uk/man8/desktoptojson.8*
+%lang(uk) %{_mandir}/uk/man8/kbuildsycoca5.8*
 /etc/xdg/kservice.categories
 
 %files devel
