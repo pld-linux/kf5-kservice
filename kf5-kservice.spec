@@ -1,15 +1,15 @@
-%define		kdeframever	5.65
+%define		kdeframever	5.67
 %define		qtver		5.9.0
 %define		kfname		kservice
 
 Summary:	Plugin framework for desktop services
 Name:		kf5-%{kfname}
-Version:	5.65.0
+Version:	5.67.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	9e8db41c9487cccc4438d79dcccb5f30
+# Source0-md5:	290466bdeddfc2c04c5a872a773d974d
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel >= %{qtver}
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -111,6 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sv) %{_mandir}/sv/man8/kbuildsycoca5.8*
 %lang(uk) %{_mandir}/uk/man8/desktoptojson.8*
 %lang(uk) %{_mandir}/uk/man8/kbuildsycoca5.8*
+%lang(id) %{_mandir}/id/man8/desktoptojson.8*
 %{_datadir}/qlogging-categories5/kservice.categories
 
 %files devel
