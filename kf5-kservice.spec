@@ -1,5 +1,5 @@
 %define		kdeframever	5.80
-%define		qtver		5.9.0
+%define		qtver		5.14.0
 %define		kfname		kservice
 
 Summary:	Plugin framework for desktop services
@@ -14,27 +14,30 @@ URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel >= %{qtver}
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
-BuildRequires:	Qt5Gui-devel >= %{qtver}
-BuildRequires:	Qt5Svg-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
-BuildRequires:	Qt5Widgets-devel >= %{qtver}
 BuildRequires:	Qt5Xml-devel >= %{qtver}
-BuildRequires:	cmake >= 2.8.12
-BuildRequires:	gettext-devel
+BuildRequires:	bison >= 3.4.1
+BuildRequires:	cmake >= 3.5
+BuildRequires:	flex
 BuildRequires:	kf5-extra-cmake-modules >= %{version}
-BuildRequires:	kf5-karchive-devel >= %{version}
 BuildRequires:	kf5-kconfig-devel >= %{version}
 BuildRequires:	kf5-kcoreaddons-devel >= %{version}
 BuildRequires:	kf5-kcrash-devel >= %{version}
 BuildRequires:	kf5-kdbusaddons-devel >= %{version}
 BuildRequires:	kf5-kdoctools-devel >= %{version}
 BuildRequires:	kf5-ki18n-devel >= %{version}
-BuildRequires:	kf5-kwindowsystem-devel >= %{version}
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+Requires:	Qt5DBus >= %{qtver}
+Requires:	Qt5Xml >= %{qtver}
 Requires:	kf5-dirs
+Requires:	kf5-kconfig >= %{version}
+Requires:	kf5-kcoreaddons >= %{version}
+Requires:	kf5-kcrash >= %{version}
+Requires:	kf5-kdbusaddons >= %{version}
+Requires:	kf5-ki18n >= %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		qt5dir		%{_libdir}/qt5
@@ -49,7 +52,7 @@ Summary:	Header files for %{kfname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kfname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	cmake >= 2.6.0
+Requires:	cmake >= 3.5
 Requires:	kf5-kconfig-devel >= %{version}
 Requires:	kf5-kcoreaddons-devel >= %{version}
 
