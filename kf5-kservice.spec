@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeframever	5.92
+%define		kdeframever	5.93
 %define		qtver		5.15.2
 %define		kfname		kservice
 
 Summary:	Plugin framework for desktop services
 Name:		kf5-%{kfname}
-Version:	5.92.0
+Version:	5.93.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	ee135f2a49135da2f36b545f3301d09a
+# Source0-md5:	45389c49e68a5fb67d0b4e7f920fb624
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel >= %{qtver}
 BuildRequires:	Qt5Core-devel >= %{qtver}
